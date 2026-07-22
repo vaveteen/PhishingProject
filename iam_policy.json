@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ReadSourceBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::hartnell-security411-source",
+                "arn:aws:s3:::hartnell-security411-source/*"
+            ]
+        },
+        {
+            "Sid": "WriteDraftsBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::hartnell-security411-drafts",
+                "arn:aws:s3:::hartnell-security411-drafts/*"
+            ]
+        }
+    ]
+}
